@@ -1,0 +1,30 @@
+.navbar {
+    background-color: rgb(204, 247, 136);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width:130px;
+    height: 50px;
+    background-color: black;
+
+}
+
+.navbar__menu {
+    list-style: none;
+    height: 100%;
+    padding: .1em;
+    margin: 0;
+}
+
+
+
+.navbar__item {
+    height: 100%;
+}
+
+.search {
+    height: 100%;
+}

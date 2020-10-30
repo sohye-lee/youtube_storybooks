@@ -1,0 +1,19 @@
+.channelItem {
+    margin-right: 20px;
+    width: auto;
+}
+
+.channelItem > img {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 160px;
+    width: auto;
+    box-shadow: 3px 3px 8px 0 rgba(0,0,0,.4);
+}
+
+.channelItem > .title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Grandstander', cursive;
+    font-weight: 200;
+}

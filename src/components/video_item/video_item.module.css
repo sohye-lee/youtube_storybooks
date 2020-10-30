@@ -1,13 +1,14 @@
 .video {
-    flex-basis: 32%;
+    flex-basis: 31%;
     width: 100%;
     height: ;
     align-items: center;
-    border: 1px solid lightgrey;
     box-shadow: 3px 3px 5px 0 rgba(33, 33, 33, .5);
-    margin-bottom: 0.4em;
+    margin-bottom: 1.1em;
     cursor: pointer;
     transition: transform 260ms ease-in;
+    border-radius: 5px;
+    background-color: rgb(255, 244, 244);
 }
 
 .video:before {
@@ -60,6 +61,7 @@
 .thumbnail {
     width: 100%;
     margin-bottom: .5em;
+    border-radius: 5px 5px 0 0;
 }
 
 .title,

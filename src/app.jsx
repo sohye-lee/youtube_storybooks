@@ -1,29 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import VideoList from './components/video_list/video_list';
 import Navbar from './components/navbar/navbar';
-import './app.css';
+import styles from './app.module.css';
+import Channel from './components/channel_list/channel_list'
 
-function App() {
+
+function App({ youtube }) {
   const [videos, setVideos] = useState([]);
+  const search = query => {
+    youtube.search(query).then(videos => setVideos(videos));
+  }
 
   useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q=children+books&key=AIzaSyAUxXJWLX9sJSAcdscisSYo1kihOn5DL2Y", requestOptions)
-      .then(response => response.json())
-      .then(result => setVideos(result.items))
-      .catch(error => console.log('error', error))
-
+    youtube.mostPopular().then(videos => setVideos(videos));
   }, []);
 
   return (
-    <React.Fragment>
-      <Navbar />
+    <div className={styles.app}>
+      <Navbar onSearch={search} />
+      <Channel />
       <VideoList videos={videos} />
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -3,4 +3,26 @@
   max-width: 90rem;
 }
 
+.content {
+  display: flex;
+}
 
+:root {
+  padding-top: 110px;
+}
+.detail {
+  flex: 1 1 70%;
+  background-color: gray;
+}
+
+.channel {
+  
+}
+
+.plain {
+
+}
+
+.videolist__plain {
+  flex: 1 1 30%;
+}

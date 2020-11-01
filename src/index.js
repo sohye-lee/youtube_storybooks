@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
 import Youtube from './service/youtube';
-import Channel from './service/channel';
 
-
-const youtube = new Youtube('AIzaSyDiK81Xz7PzVVBRXA7TiydSx8WQ2U6hULs');
+const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
 ReactDOM.render(
   <React.StrictMode>
     <App youtube={youtube} />

@@ -24,7 +24,7 @@ const Navbar = ({onSearch}) => {
     return (
         <nav className={styles.navbar}>
             <a href={'/'} className={styles.brand}>
-                <img className={styles.youtube__logo} src={"/images/logo1.png"} alt={'logo'} /><span className={styles.youtube__logo__append}>STORIES</span>
+                <img className={styles.youtube__logo} src={"/images/logo3.png"} alt={'logo'} /><span className={styles.youtube__logo__append}>STORYBOOKS</span>
             </a>
             <div className={styles.nav__search}>
                 <input ref={inputRef} className={styles.search} type="search" placeholder="Search..." onKeyPress={onKeyPress} />

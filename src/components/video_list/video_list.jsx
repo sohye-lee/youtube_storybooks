@@ -1,18 +1,19 @@
-import { faChevronCircleUp, faShoePrints, faStepForward } from '@fortawesome/free-solid-svg-icons';
+import { faShoePrints } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import VideoItem from '../video_item/video_item';
 import styles from './video_list.module.css';
 
-const VideoList = props => (
+const VideoList = ({videos, onVideoClick}) => (
     <div>
-        <h1 className={styles.videoList__title}>30 Most Popular Stories</h1>
+        {/* <h1 className={styles.videoList__title}>Stories</h1> */}
         <ul className={styles.videoList__content}>
-            {props.videos.map(video => (
-                <VideoItem key={video.id.videoId} video={video} />
+            {/* <div className={styles.videoList__title}><li>Stories</li></div> */}
+            {videos.map(video => (
+                <VideoItem key={video.id.videoId} video={video} onVideoClick={onVideoClick} />
             ))}
         </ul>
-        <a href={'/'} className={styles.up}><FontAwesomeIcon icon={faShoePrints}/></a>
+        <a href={'#'} className={styles.up}><FontAwesomeIcon icon={faShoePrints}/></a>
     </div>
 );
 

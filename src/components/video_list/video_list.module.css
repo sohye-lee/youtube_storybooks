@@ -1,9 +1,17 @@
 .videoList__title {
-    text-align: center;
-    font-size: 2.9rem;
-    font-family: 'Grandstander', cursive;
+    flex-basis: 31%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
+    background-color: rgb(29, 179, 104);
+    background: linear-gradient(.25turn, rgb(51, 145, 233),rgb(99, 39, 167));
+    color: white;
+    border-radius: 12px;
 }
 .videoList__content {
     max-width: 90%;

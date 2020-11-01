@@ -1,25 +1,22 @@
 .video {
     flex-basis: 31%;
     width: 100%;
-    height: ;
+    height: 100%;
     align-items: center;
-    box-shadow: 3px 3px 5px 0 rgba(33, 33, 33, .5);
-    margin-bottom: 1.1em;
+    margin-bottom: 1.3em;
     cursor: pointer;
     transition: transform 260ms ease-in;
-    border-radius: 5px;
-    background-color: rgb(255, 244, 244);
+    border-radius: 8px;
+    padding: 5px 0 0 0;
+    position: relative;
 }
 
-.video:before {
-    content: "";
-	float: left;
-	padding-top: 83%; 
-}
 .video:hover {
-    transform: scale(1.03);
-    box-shadow: 10px 10px 30px 0 rgba(58, 89, 109, 0.7), -10px -10px 30px 0 rgba(54, 91, 116, 0.7);
+    transform: scale(1.04);
     animation: shaking 120ms ease-in ;
+}
+.video:hover > .video__titlebox {
+    transform: translateY(-70px);
 }
 
 @keyframes shaking {
@@ -60,13 +57,47 @@
 
 .thumbnail {
     width: 100%;
-    margin-bottom: .5em;
-    border-radius: 5px 5px 0 0;
+    height: 100%;
+    border-radius: 8px;
+    margin-bottom: 0;
+    padding: 0;
+    z-index: 2;
 }
 
-.title,
-.channel {
-    margin: 0.2em .5em;
+.video__titlebox {
+    z-index: -1;
+    position: relative;
+    top: 70px;
+    padding: 3px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: wblack;
+    transform: forward;
+    line-height: 1.4rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    transition: all 380ms ease-in;
+}
+
+.video__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    max-width: 320px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.video__channel {
+    font-weight: 100;
+    margin: 2px;
+    padding: 0;
 }
 
 @media screen and (max-width:1080px) {

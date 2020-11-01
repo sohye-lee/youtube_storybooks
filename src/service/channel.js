@@ -7,10 +7,11 @@ class Channel {
           };
     }
 
-    mostPopular() {
-        return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&channelType=any&maxResults=30&q=kids+storybooks+read&key=${this.key}&chart=mostPopular`, this.getRequestOptions)
-        .then(response => response.json())
-        .then(result => result.items)
+    async mostPopular() {
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&channelType=any&maxResults=30&q=kids+storybooks+read&key=${this.key}&chart=mostPopular`, this.getRequestOptions);
+        const result = await response.json() 
+        
+        return result.items
     }
 
 }
